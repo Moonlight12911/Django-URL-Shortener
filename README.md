@@ -4,6 +4,15 @@ A simple and efficient URL Shortener web application built with Python and Djang
 
 ## Overview
 
+<p align="center">
+<img src="assets/image-prev.png" width="800">
+</p>
+
+<p align="center">
+<img src="assets/image2.png" width="600">
+</p>
+
+
 This application takes long URLs and generates short, unique links. It stores the mapping in a database and correctly redirects users when they access the shortened URL. 
 
 ## Features
