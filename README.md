@@ -1,90 +1,118 @@
-# Django URL Shortener
+# 🔗 Django URL Shortener
 
-A simple and efficient URL Shortener web application built with Python and Django.
-
-## Overview
+A simple and efficient URL Shortener web application built with **Python** and **Django** that converts long URLs into short, shareable links with instant redirection.
 
 <p align="center">
-<img src="assets/image-prev.png" width="800">
-</p>
 
-<p align="center">
-<img src="assets/image2.png" width="600">
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Website-2ea44f?style=for-the-badge)](https://djshort.onrender.com)
+
 </p>
 
 
-This application takes long URLs and generates short, unique links. It stores the mapping in a database and correctly redirects users when they access the shortened URL. 
+<p align="center">
+<img src="assets/image-prev.png" width="500">
+</p>
 
-## Features
+<p align="center">
+<img src="assets/image2.png" width="300">
+</p>
 
-- **Long to Short URL Conversion**: Easily convert any valid URL into a compact, easily shareable short link.
-- **Unique Link Generation**: Automatically ensures that all generated short codes are unique.
-- **Instant Redirection**: Transparently redirects users from a short link to the original target destination.
-- **Minimalistic UI**: Clean and straightforward home page interface for creating short links.
+This application allows users to shorten long URLs into compact links and automatically redirects visitors to the original destination when the shortened URL is opened.
 
-## Project Structure
+---
 
-- `core/`: Main Django project configuration settings and root routing.
-- `shortener/`: The core app handling the models, views, and routing for URLs.
-- `templates/`: HTML templates for the user interface.
+## ✨ Features
 
-## Prerequisites
+- 🔗 Convert long URLs into short, shareable links
+- ⚡ Instant redirection to the original website
+- 🎯 Automatically generates unique short codes
+- 💾 Stores URLs using SQLite
+- 🎨 Simple and responsive user interface
+- 🚀 Deployed on Render
 
-- [Python](https://www.python.org/downloads/) 3.x
-- [Django](https://www.djangoproject.com/) 3.x or higher
+## 🛠️ Tech Stack
 
-## Local Setup & Installation
+- Python
+- Django
+- HTML5
+- CSS3
+- SQLite
+- Gunicorn
+- WhiteNoise
+- Render
+---
 
-1. **Clone the repository** (if you haven't already):
-   ```bash
-   git clone <your-github-repo-url>
-   cd "Django Project/url_shortener"
-   ```
+## 🚀 Installation
 
-2. **Set up a Virtual Environment (Optional but Recommended)**:
-   ```bash
-   python -m venv venv
-   # On Windows:
-   venv\Scripts\activate
-   # On macOS/Linux:
-   source venv/bin/activate
-   ```
+### 1. Clone the repository
 
-3. **Install Dependencies**:
-   If there is a `requirements.txt` file (you can generate one with `pip freeze > requirements.txt`), run:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *Otherwise, simply install Django:*
-   ```bash
-   pip install django
-   ```
+```bash
+git clone https://github.com/Moonlight12911/Django-URL-Shortener.git
+cd Django-URL-Shortener
+```
 
-4. **Apply Database Migrations**:
-   Run the following command to set up the SQLite database (the default in Django):
-   ```bash
-   python manage.py migrate
-   ```
+### 2. Create a virtual environment
 
-5. **Run the Development Server**:
-   ```bash
-   python manage.py runserver
-   ```
+```bash
+python -m venv venv
+```
 
-6. **Access the Application**:
-   Open your browser and navigate to `http://127.0.0.1:8000/`.
+Activate it:
 
-## Usage
+**Windows**
 
-1. Open the homepage in your browser.
-2. Enter the long URL you want to shorten into the input form.
-3. Submit the form to generate your short URL (e.g., `http://127.0.0.1:8000/xYz123`).
-4. Share the shortened link. When anyone clicks it, they will be seamlessly redirected to the original long URL!
+```bash
+venv\Scripts\activate
+```
 
-## Contributing
+**macOS/Linux**
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+```bash
+source venv/bin/activate
+```
 
-## License
+### 3. Install dependencies
 
-This project is open-source and available under the [MIT License](LICENSE).
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Apply migrations
+
+```bash
+python manage.py migrate
+```
+
+### 5. Start the development server
+
+```bash
+python manage.py runserver
+```
+
+Open:
+
+```
+http://127.0.0.1:8000/
+```
+
+---
+
+## 📌 Usage
+
+1. Open the application.
+2. Paste a long URL.
+3. Click **Shorten URL**.
+4. Copy and share the generated short link.
+5. Opening the short link redirects to the original website.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
