@@ -5,7 +5,13 @@ A clean, simple, and efficient URL Shortener web application built with **Python
 <p align="center">
 <a href="https://djshort.onrender.com"><img src="https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Website-2ea44f?style=for-the-badge" alt="Live Demo"></a>
 </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Moonlight12911/Django-URL-Shortener/main/assets/image.png" alt="Django URL Shortener">
+</p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Moonlight12911/Django-URL-Shortener/main/assets/image2.png" alt="Django URL Shortener Screenshot">
+</p>
 ## ✨ Features
 
 - **Long to Short URL Conversion**: Easily convert any valid URL into a compact, easily shareable short link.
