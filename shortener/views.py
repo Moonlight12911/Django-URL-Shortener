@@ -1,15 +1,21 @@
-# from django.shortcuts import render
-
-# # Create your views here.
-from django.shortcuts import render, redirect
+import random
+import string
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import ShortURL
-from .utils import generate_code
+
+
+def generate_code(length: int = 6) -> str:
+    """Generates a random alphanumeric short code."""
+    characters = string.ascii_letters + string.digits
+    return ''.join(random.choices(characters, k=length))
+
 
 def home(request):
+    """Renders the homepage and handles URL shortening form submissions."""
     short_url = None
 
     if request.method == 'POST':
-        original_url = request.POST.get('url')
+        original_url = request.POST.get('url', '').strip()
 
         if original_url:
             code = generate_code()
@@ -23,12 +29,12 @@ def home(request):
 
             short_url = request.build_absolute_uri('/') + obj.short_code
 
-    return render(request, 'shortener/home.html', {
+    return render(request, 'home.html', {
         'short_url': short_url
     })
 
 
-
 def redirect_url(request, code):
-    obj = ShortURL.objects.get(short_code=code)
-    return redirect(obj.original_url)
+    """Redirects the short code to the corresponding destination URL."""
+    short_url_obj = get_object_or_404(ShortURL, short_code=code)
+    return redirect(short_url_obj.original_url)
